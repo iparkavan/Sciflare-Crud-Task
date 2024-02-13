@@ -8,7 +8,7 @@ interface userModalProps {
   onClose: () => void;
   user?: User;
   heading: string;
-  type: "Add" | "Edit";
+  type?: "Add" | "Edit";
 }
 
 const UserModal: React.FC<userModalProps> = ({

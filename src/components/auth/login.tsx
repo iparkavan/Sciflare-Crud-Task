@@ -8,6 +8,8 @@ import { useRouter } from "next/navigation";
 import { useAppDispatch } from "@/store/redux-hook";
 import { setUserInfo } from "@/store/userSlice";
 import { login } from "@/store/action.type";
+import Link from "next/link";
+import UserModal from "../user-modal";
 
 const Login = () => {
   const router = useRouter();
@@ -19,6 +21,8 @@ const Login = () => {
   const [error, setError] = useState("");
 
   const { data: allUsers } = useGetUsers();
+
+  const [isUserModalOpen, setIsUserModalOpen] = useState(false);
 
   // allUsers.fin
 
@@ -51,7 +55,7 @@ const Login = () => {
     setPassword("");
     setError("");
 
-    // localStorage.setItem("isLoggedIn", "true");
+    // localStorage.setItem(pu"isLoggedIn", "true");
     router.push("/");
   };
 
@@ -87,7 +91,27 @@ const Login = () => {
             />
           </div>
         </div>
-        <div className="flex items-center justify-end mt-6">
+        <div className="flex items-center justify-end mt-6 gap-5">
+          <Link href={"/signup"} className="underline text-amber-700">
+            Create a User
+          </Link>
+          {/* <div
+            className="underline text-amber-700"
+            onClick={() => setIsUserModalOpen(true)}
+          >
+            
+          </div>
+          {isUserModalOpen && (
+            <div className="flex items-center justify-center">
+              <div className="fixed ml-[-60px] mt-[-150px] min-w-[200px] z-30">
+                <UserModal
+                  onClose={() => setIsUserModalOpen(false)}
+                  type="Add"
+                  heading="Sign Up"
+                />
+              </div>
+            </div>
+          )} */}
           <Button className="bg-blue-500 p-2 rounded-lg" type="submit">
             Log In
           </Button>

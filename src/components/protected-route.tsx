@@ -17,13 +17,13 @@ const ProtectedRoute: React.FC<ProtectedRouteProps> = ({ children }) => {
     return null;
   }
 
-  useEffect(() => {
-    const loginStatus = localStorage.getItem("isLoggedIn");
+  // useEffect(() => {
+  //   const loginStatus = localStorage.getItem("isLoggedIn");
 
-    if (!loginStatus) {
-      router.push("/login");
-    }
-  }, []);
+  //   if (!loginStatus) {
+  //     router.push("/login");
+  //   }
+  // }, []);
 
   return <div>{children}</div>;
 };
