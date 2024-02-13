@@ -51,7 +51,7 @@ const Login = () => {
     setPassword("");
     setError("");
 
-    localStorage.setItem("isLoggedIn", "true");
+    // localStorage.setItem("isLoggedIn", "true");
     router.push("/");
   };
 

@@ -23,6 +23,7 @@ export const userSlice = createSlice({
   reducers: {
     setUserInfo: (state, action) => {
       state.userInfo = action.payload
+      console.log(action.payload)
 
       switch (action.payload.status) {
         case 'LOGIN':

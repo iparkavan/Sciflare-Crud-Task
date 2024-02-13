@@ -1,15 +1,12 @@
 "use client";
 
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { IoMdMenu } from "react-icons/io";
-import { BsPerson } from "react-icons/bs";
-import { CiSearch } from "react-icons/ci";
-import { CiShoppingCart } from "react-icons/ci";
+
 import { useRouter } from "next/navigation";
 import { MdLogout } from "react-icons/md";
 import { useAppDispatch } from "@/store/redux-hook";
 import { setUserInfo } from "@/store/userSlice";
-// import CartModal from "../cart/cart-modal";
 
 const Navbar = () => {
   const router = useRouter();
@@ -17,7 +14,7 @@ const Navbar = () => {
 
   const logoutHandler = () => {
     dispatch(setUserInfo("LOGOUT"));
-    localStorage.removeItem("isLoggedIn");
+    // localStorage.removeItem("isLoggedIn");
     router.push("/login");
   };
 
