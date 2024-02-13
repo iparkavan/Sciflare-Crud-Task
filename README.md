@@ -1,3 +1,20 @@
+You need to first create a post request to this specific URl https://crudcrud.com/api/${ENTER THE NEW ID}/users.
+The send this body in the post man 
+{
+    "username": "ipark_avan",
+    "fullname": "Parkavan Suriyaprakasam",
+    "email": "ipark.avan@gmail.com",
+    "password": "park@123",
+    "age": "27"
+}
+
+Once you got in you can do the CRUD operation to get, create, update and delete user. you can relogin by using the created user in the dashboard. 
+
+
+
+
+
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
