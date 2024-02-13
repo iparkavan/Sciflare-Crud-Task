@@ -50,7 +50,7 @@ const UserList: React.FC<userListprops> = ({ user }) => {
           <MdDeleteForever size={24} color="red" />
         </div>
       </td>
-      <div className="fixed left-0 right-0 mt-32 z-30">
+      <div className="fixed left-0 right-0 z-30">
         {isEditModalOpen && (
           <UserModal
             onClose={() => setIsEditModalOpen(false)}

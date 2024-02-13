@@ -23,7 +23,7 @@ const BackDrop = ({ onClose }: backdropProps) => {
 const ModalOverlay = ({ children }: { children: React.ReactNode }) => {
   return (
     <div className="w-full flex items-center justify-center">
-      <div className="fixed min-w-[30%] bg-white z-30 p-1 rounded-xl drop-shadow-xl animate-slide-down">
+      <div className="fixed min-w-[30%] mb-24 bg-white z-30 p-1 rounded-xl drop-shadow-xl animate-slide-down">
         {children}
       </div>
     </div>

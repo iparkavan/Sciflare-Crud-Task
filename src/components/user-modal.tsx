@@ -41,24 +41,36 @@ const UserModal: React.FC<userModalProps> = ({
     e.preventDefault();
 
     if (type === "Add") {
-      addUserMutate({
-        username,
-        fullname,
-        email,
-        password,
-        age,
-      });
+      addUserMutate(
+        {
+          username,
+          fullname,
+          email,
+          password,
+          age,
+        },
+        {
+          onSuccess: () => {
+            onClose();
+          },
+        }
+      );
     } else if (type === "Edit") {
-      updateUserMutate({
-        username,
-        fullname,
-        email,
-        password,
-        age,
-      });
+      updateUserMutate(
+        {
+          username,
+          fullname,
+          email,
+          password,
+          age,
+        },
+        {
+          onSuccess: () => {
+            onClose();
+          },
+        }
+      );
     }
-
-    onClose();
   };
 
   return (

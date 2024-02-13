@@ -31,7 +31,7 @@ const MainPage = () => {
               +
             </Button>
           </div>
-          <div className="mt-32">
+          <div>
             {isAddModalOpen && (
               <UserModal
                 onClose={() => setIsAddModalOpen(false)}
